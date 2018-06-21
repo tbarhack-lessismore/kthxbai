@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KTHXBAI</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/DetectRTC.js"> </script>
+    <script src="https://cdn.webrtc-experiment.com/getHTMLMediaElement.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+
+    <header class="video-playlist">
+        <div class="video-nav">
+            <div class="video-item-group-container">
+                <div id="video-item-group" class="video-item-group">
+                    <div class="video-item" data-src="https://yansern.com/kthxbai/sample-1.mp4">
+                        <div><div>
+                            <img src="https://yansern.com/kthxbai/sample-1.jpg" />
+                        </div></div>
+                    </div>
+                    <div class="video-item" data-src="https://yansern.com/kthxbai/sample-2.mp4">
+                        <div><div>
+                            <img src="https://yansern.com/kthxbai/sample-2.jpg" />
+                        </div></div>
+                    </div>
+                    <div class="video-item" data-src="https://yansern.com/kthxbai/sample-3.mp4">
+                        <div><div>
+                            <img src="https://yansern.com/kthxbai/sample-3.jpg" />
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="prev-button">&lsaquo;</div>
+            <div class="next-button">&rsaquo;</div>
+        </div>
+        <div class="video-record-status">Get Ready!</div>
+    </header>
+
+    <section class="experiment recordrtc">
+        <div id="recording-player"></div>
+        <img class="rec-icon" src="https://cdn.webrtc-experiment.com/images/progress.gif">
+        <div class="hint">
+            <strong>KTHXBAI</strong>
+            <div>Say "Thank You", give a compliment or show your appreciation in only 5 seconds!</div>
+        </div>
+
+        <button id="btn-play" class="ytp-play-button ytp-button" aria-live="assertive" tabindex="32" aria-label="Pause">
+            <svg width="100%" height="100%" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <defs>
+                  <path id="ytp-12" d="M 11 10 L 17 10 L 17 26 L 11 26 M 20 10 L 26 10 L 26 26 L 20 26">
+                     <animate id="animation" begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" from="M11,10 L17,10 17,26 11,26 M20,10 L26,10 26,26 20,26" to="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28" dur="0.1s" keySplines=".4 0 1 1"
+                     repeatCount="1"></animate>
+                  </path>
+               </defs>
+               <use xlink:href="#ytp-12" class="ytp-svg-shadow"></use>
+               <use xlink:href="#ytp-12" class="ytp-svg-fill"></use>
+            </svg>
+        </button>
+    </section>
+
+    <footer id="footer" style="border: none !important;">
+        <div class="footer-hint">
+            <strong>KTHXBAI</strong><br/>
+            Say "Thank You", give a compliment or
+            show your appreciation in only 5 seconds!
+        </div>
+        <button id="btn-start-recording">Start Recording</button>
+        <div id="countdown">15</div>
+        <div class="preview-actions">
+            <button id="btn-send">Yes</button>
+            <button id="btn-nexttime">No</button>
+            <button id="btn-tryagain">Try Again</button>
+        </div>
+        <div id="getready">
+            <span class="ready-3">3</span>
+            <span class="ready-2">2</span>
+            <span class="ready-1">1</span>
+        </div>
+    </footer>
+
+    <div style="text-align: center; display: none;">
+        <button id="save-to-disk">Save To Disk</button>
+    </div>
+
+    <select class="media-container-format" style="visibility: hidden">
+        <option>default</option>
+        <option selected>h264</option>
+    </select>
+
+    <script src="javascripts/main.js"></script>
+
+</body>
+
+</html>
